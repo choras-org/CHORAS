@@ -88,21 +88,35 @@ bibliography: paper.bib
 
 # Statement of need
 
-The field of simulating room acoustics 
+The field of simulating room acoustics has a history of several decades and over these years, much software has been created around this topic. Room acoustics simulation software is used by acoustic consultants, who use it to, for instance, predict important acoustic characteristics of spaces before they are built, or to make changes to existing spaces to improve their acoustics. Academic researchers use the software to investigate acoustics in a controlled environment and to avoid the need for real spaces. (<- @Maarten you can probably write this much better)
 
-Although in recent years, an increasing amount of effort has been put in making these software open source, many live on their own repository and require technical know-how to be used [@Hornikx:2024].
+Although in recent years, an increasing amount of effort has been put in making these software open source, many exist as code repositories and require technical know-how to be used [@Hornikx:2024]. Furthermore, each software uses its own pre- and postprocessing pipelines and can therefore not easily be compared.
 
-The Community Hub for Open-source Room Acoustics Software (CHORAS) aims [@Willemsen:2025]
+The Community Hub for Open-source Room Acoustics Software (CHORAS) is a 
+
+aims to [@Willemsen:2025]
 
 [@CHORAS]
 
+![The CHORAS user interface.\label{fig:screenshot}](JOSS_paper_figures/chorasScreenshot.png)
+![The CHORAS architecture (taken from [@Willemsen:2025]).\label{fig:example}](JOSS_paper_figures/CHORAS-functionality.pdf)
+CHORAS-functionality
 The goal of CHORAS is threefold:
 
-1. to provide a platform for researchers to bring their software closer to end users.
-2. to allow (non-technical) end-users an easy way to use existing simulation methods
+1. to provide a platform for researchers to bring their room acoustics software closer to end users,
+2. to allow (non-technical) end-users an easy way to use existing and new simulation methods, and
 3. to create an easy way for various room acoustics simulation methods to be compared.
 
-Altogether, CHORAS intends to increase the impact of the collecive work if the room acoustics simulation community
+Altogether, CHORAS intends bridge the gap between (new) research in the field of room acoustics and the end user, increasing the impact of the collecive work if the room acoustics simulation research community and providing novel tools for the end user in a user friendly package.
+
+As each simulation method has its own set of parameters
+
+### Input
+- Geometry (.obj)
+- 
+
+### Output
+
 
 CHORAS is a collaboration between various universities and institutes working on room acoustics simulation software, front-end developers, acoustic consultants (i.e., the end user).
 
@@ -110,22 +124,13 @@ Room acoustics simuation methods which are already coupled:
 
 | Name | Paper(s)         | Repository |
 |----------|:---------------:|:-----------------:|
-| The acoustic diffusion equation (DE)  | [@Fichera:2025; @Fichera:2024] | [[@Fichera_acousticDE_2025]](https://github.com/Building-acoustics-TU-Eindhoven/acousticDE/) |
-| Discontinuous Galerkin (DG) method    | [@Wang_DG_RoomAcoustics_2024]  | [@wang2024open]            |
-| Pyroomacoustics                       | [@Scheibler:2018]              | [@pyroomacoustics]         |
-| DEISM                                 | [@Xu:2024]                     | [@DEISM]                   |
-| SPPS                                  | [@Picaut:2012]                 | [@iSimpa]                  |
-| DeepONet                              | [@borrel-jensen2023sound]      | [@deeponet:2025]           |
-| ParallelFDTD                          | [@Saarelma:2014]               | [@parallelFDTD]            |
-
-Room acoustics simuation methods already coupled:
-- The acoustic diffusion equation (DE) (software: [@Fichera_acousticDE_2025])
-- Discontinuous Galerkin (DG) method (paper: [@Wang_DG_RoomAcoustics_2024], repository: [@wang2024open])
-- Pyroomacoustics (paper: [@Scheibler:2018], software: [@pyroomacoustics])
-- DEISM (paper: [@Xu:2024], software: [@DEISM])
-- SPPS (paper: software: [@iSimpa])
-- DeepONet (paper: [@borrel-jensen2023sound], software: [@deeponet:2025])
-
+| Acoustic diffusion equation (DE)      | @Fichera:2025, @Fichera:2024 | @Fichera_acousticDE_2025 |
+| Discontinuous Galerkin (DG)           | @Wang_DG_RoomAcoustics_2024  | @wang2024open            |
+| Pyroomacoustics                       | @Scheibler:2018              | @pyroomacoustics         |
+| DEISM                                 | @Xu:2024                     | @DEISM                   |
+| SPPS                                  | @Picaut:2012                 | @iSimpa                  |
+| DeepONet                              | @borrel-jensen2023sound      | @deeponet:2025           |
+| ParallelFDTD                          | @Saarelma:2014               | @parallelFDTD            |
 
 # Citations
 
@@ -152,6 +157,8 @@ Figure sizes can be customized by adding an optional second parameter:
 
 # Acknowledgements
 
-Ajat Dajorat, Radhea Amardika, Fachri Hawari
+John Bons?
+
+Sil de Graaf for design
 
 # References
