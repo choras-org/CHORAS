@@ -106,13 +106,27 @@ Altogether, CHORAS intends to increase the impact of the collecive work if the r
 
 CHORAS is a collaboration between various universities and institutes working on room acoustics simulation software, front-end developers, acoustic consultants (i.e., the end user).
 
+Room acoustics simuation methods which are already coupled:
+
+| Name | Paper(s)         | Repository |
+|----------|:---------------:|:-----------------:|
+| The acoustic diffusion equation (DE)  | [@Fichera:2025; @Fichera:2024] | [[@Fichera_acousticDE_2025]](https://github.com/Building-acoustics-TU-Eindhoven/acousticDE/) |
+| Discontinuous Galerkin (DG) method    | [@Wang_DG_RoomAcoustics_2024]  | [@wang2024open]            |
+| Pyroomacoustics                       | [@Scheibler:2018]              | [@pyroomacoustics]         |
+| DEISM                                 | [@Xu:2024]                     | [@DEISM]                   |
+| SPPS                                  | [@Picaut:2012]                 | [@iSimpa]                  |
+| DeepONet                              | [@borrel-jensen2023sound]      | [@deeponet:2025]           |
+| ParallelFDTD                          | [@Saarelma:2014]               | [@parallelFDTD]            |
 
 Room acoustics simuation methods already coupled:
 - The acoustic diffusion equation (DE) (software: [@Fichera_acousticDE_2025])
 - Discontinuous Galerkin (DG) method (paper: [@Wang_DG_RoomAcoustics_2024], repository: [@wang2024open])
 - Pyroomacoustics (paper: [@Scheibler:2018], software: [@pyroomacoustics])
 - DEISM (paper: [@Xu:2024], software: [@DEISM])
+- SPPS (paper: software: [@iSimpa])
 - DeepONet (paper: [@borrel-jensen2023sound], software: [@deeponet:2025])
+
+
 # Citations
 
 Citations to entries in paper.bib should be in
