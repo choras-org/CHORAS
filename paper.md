@@ -1,5 +1,5 @@
 ---
-title: 'Gala: A Python package for galactic dynamics'
+title: 'CHORAS: the Community Hub for Open-source Room Acoustics Software'
 tags:
   - Python
   - room acoustics
@@ -30,6 +30,16 @@ authors:
     affiliation: 3
   - name: Albert Prinn
     affiliation: 4
+  - name: Nicolas Fortin
+    affiliation: 5  
+  - name: Judicaël Picaut
+    affiliation: 5
+  - name: Nikolas Borrel-Jensen
+    affiliation: 6
+  - name: Hossein Firooz
+    affiliation: 7
+  - name: Lauri Savioja
+    affiliation: 7
   - name: Maarten Hornikx
     corresponding: true # (This is how to denote the corresponding author)
     equal-contrib: true
@@ -44,6 +54,15 @@ affiliations:
    index: 3
  - name: Fraunhofer Institute for Integrated Circuits IIS, Erlangen, Germany.
    index: 4
+ - name: Université Gustave Eiffel, CEREMA, UMRAE, France.
+   index: 5
+ - name: Pasteur Labs, USA.
+   index: 6
+ - name: School of Science, Aalto, Finland.
+   index: 7
+ - name: Department of Computer Science, Aalto, Finland.
+   index: 8
+
 date: 15 December 2026
 bibliography: paper.bib
 
