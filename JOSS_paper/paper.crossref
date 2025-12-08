@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.3.1"
+           xmlns:ai="http://www.crossref.org/AccessIndicators.xsd"
+           xmlns:rel="http://www.crossref.org/relations.xsd"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           version="5.3.1"
+           xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
+  <head>
+    <doi_batch_id>20251216141920-e1c686da59394e25467283acc4724bd179857eac</doi_batch_id>
+    <timestamp>20251216141920</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Software</full_title>
+        <abbrev_title>JOSS</abbrev_title>
+        <issn media_type="electronic">2475-9066</issn>
+        <doi_data>
+          <doi>10.21105/joss</doi>
+          <resource>https://joss.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>01</month>
+          <year>1970</year>
+        </publication_date>
+        <journal_volume>
+          <volume>¿VOL?</volume>
+        </journal_volume>
+        <issue>¿ISSUE?</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>CHORAS: the Community Hub for Open-source Room Acoustics Software</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Silvin</given_name>
+            <surname>Willemsen</surname>
+            <affiliations>
+              <institution><institution_name>Department of the Built Environment, Eindhoven University of Technology, The Netherlands</institution_name><institution_id type="ror">https://ror.org/https://ror.org/02c2kyt77</institution_id></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0002-4062-5473</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Marco</given_name>
+            <surname>Berzborn</surname>
+            <affiliations>
+              <institution><institution_name>Department of the Built Environment, Eindhoven University of Technology, The Netherlands</institution_name><institution_id type="ror">https://ror.org/https://ror.org/02c2kyt77</institution_id></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0002-4421-1702</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Alexander</given_name>
+            <surname>Nolte</surname>
+            <affiliations>
+              <institution><institution_name>Department of Mathematics and Computer Science, Eindhoven University of Technology, The Netherlands</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0003-1255-824X</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Alexander</given_name>
+            <surname>Serebrenik</surname>
+            <affiliations>
+              <institution><institution_name>Department of Mathematics and Computer Science, Eindhoven University of Technology, The Netherlands</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0002-1418-0095</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Ilaria</given_name>
+            <surname>Fichera</surname>
+            <affiliations>
+              <institution><institution_name>Department of the Built Environment, Eindhoven University of Technology, The Netherlands</institution_name><institution_id type="ror">https://ror.org/https://ror.org/02c2kyt77</institution_id></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0002-0097-1486</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Huiqing</given_name>
+            <surname>Wang</surname>
+            <affiliations>
+              <institution><institution_name>Department of the Built Environment, Eindhoven University of Technology, The Netherlands</institution_name><institution_id type="ror">https://ror.org/https://ror.org/02c2kyt77</institution_id></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0003-3465-3555</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Lavínia</given_name>
+            <surname>Paganini</surname>
+            <affiliations>
+              <institution><institution_name>Department of Mathematics and Computer Science, Eindhoven University of Technology, The Netherlands</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0002-2729-0314</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Zeyu</given_name>
+            <surname>Xu</surname>
+            <affiliations>
+              <institution><institution_name>International Audio Laboratories Erlangen, Germany.</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0002-4158-6218</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Anjana</given_name>
+            <surname>Rajasekhar</surname>
+            <affiliations>
+              <institution><institution_name>International Audio Laboratories Erlangen, Germany.</institution_name></institution>
+            </affiliations>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Albert</given_name>
+            <surname>Prinn</surname>
+            <affiliations>
+              <institution><institution_name>Fraunhofer Institute for Integrated Circuits IIS, Erlangen, Germany.</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0003-3491-3644</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Nicolas</given_name>
+            <surname>Fortin</surname>
+            <affiliations>
+              <institution><institution_name>Université Gustave Eiffel, CEREMA, UMRAE, France.</institution_name></institution>
+            </affiliations>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Judicaël</given_name>
+            <surname>Picaut</surname>
+            <affiliations>
+              <institution><institution_name>Université Gustave Eiffel, CEREMA, UMRAE, France.</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0002-0586-2414</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Nikolas</given_name>
+            <surname>Borrel-Jensen</surname>
+            <affiliations>
+              <institution><institution_name>Pasteur Labs, USA.</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0002-8820-4635</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Hossein</given_name>
+            <surname>Firooz</surname>
+            <affiliations>
+              <institution><institution_name>Department of Computer Science, Aalto, Finland.</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0001-7196-3873</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Lauri</given_name>
+            <surname>Savioja</surname>
+            <affiliations>
+              <institution><institution_name>Department of Computer Science, Aalto, Finland.</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0002-8261-4596</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Ajat</given_name>
+            <surname>Dajorat</surname>
+            <affiliations>
+              <institution><institution_name>Hacktiv8, Indonesia.</institution_name></institution>
+            </affiliations>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Radhea</given_name>
+            <surname>Amardika</surname>
+            <affiliations>
+              <institution><institution_name>Hacktiv8, Indonesia.</institution_name></institution>
+            </affiliations>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Fachri</given_name>
+            <surname>Hawari</surname>
+            <affiliations>
+              <institution><institution_name>Hacktiv8, Indonesia.</institution_name></institution>
+            </affiliations>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Maarten</given_name>
+            <surname>Hornikx</surname>
+            <affiliations>
+              <institution><institution_name>Department of the Built Environment, Eindhoven University of Technology, The Netherlands</institution_name><institution_id type="ror">https://ror.org/https://ror.org/02c2kyt77</institution_id></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0002-8343-6613</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>01</month>
+          <day>01</day>
+          <year>1970</year>
+        </publication_date>
+        <pages>
+          <first_page>¿PAGE?</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">N/A</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">10.5281</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>N/A</doi>
+          <resource>https://joss.theoj.org/papers/N/A</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://joss.theoj.org/papers/N/A.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="Hornikx:2024">
+            <article_title>Exploring the current landscape of open research software in room acoustics</article_title>
+            <author>Hornikx</author>
+            <journal_title>Proc. Of 53rd int. Congress &amp; exposition on noise control engineering, inter.noise24</journal_title>
+            <cYear>2024</cYear>
+            <unstructured_citation>Hornikx, M., Wang, H., Fichera, I., Paganini, L., Nolte, A., &amp; Serebrenik, A. (2024). Exploring the current landscape of open research software in room acoustics. Proc. Of 53rd Int. Congress &amp; Exposition on Noise Control Engineering, Inter.noise24, 5875–5884. \url{https://doi.org/10.3397/IN_2024_3656}</unstructured_citation>
+          </citation>
+          <citation key="Willemsen:2025">
+            <article_title>Towards a community hub for open-source room acoustics software</article_title>
+            <author>Willemsen</author>
+            <journal_title>11th EAA annual european conference on acoustics and noise control engineering, forum acusticum / euronoise 2025</journal_title>
+            <cYear>2025</cYear>
+            <unstructured_citation>Willemsen, S., Teymoori, H., Fichera, I., Wang, H., Nolte, A., Serebrenik, A., &amp; Hornikx, M. (2025). Towards a community hub for open-source room acoustics software. 11th EAA Annual European Conference on Acoustics and Noise Control Engineering, Forum Acusticum / Euronoise 2025.</unstructured_citation>
+          </citation>
+          <citation key="CHORAS">
+            <article_title>CHORAS</article_title>
+            <author>choras-org</author>
+            <journal_title>GitHub repository</journal_title>
+            <cYear>2025</cYear>
+            <unstructured_citation>choras-org. (2025). CHORAS. In GitHub repository. GitHub. https://github.com/choras-org/CHORAS</unstructured_citation>
+          </citation>
+          <citation key="Wang_DG_RoomAcoustics_2024">
+            <article_title>edg-acoustics</article_title>
+            <author>Wang</author>
+            <journal_title>GitHub repository</journal_title>
+            <doi>10.5281/zenodo.13619551</doi>
+            <cYear>2024</cYear>
+            <unstructured_citation>Wang, H., &amp; Palha, A. (2024). edg-acoustics. In GitHub repository (Version 1.0.0-alpha.1). GitHub. https://doi.org/10.5281/zenodo.13619551</unstructured_citation>
+          </citation>
+          <citation key="Fichera:2025">
+            <article_title>A neural network for predicting with the diffusion equation: A case study of long rooms</article_title>
+            <author>Fichera</author>
+            <journal_title>Forum acusticum</journal_title>
+            <cYear>2025</cYear>
+            <unstructured_citation>Fichera, I., Deleforge, A., Foy, C., Pascal, J.-D., Prax, C., Tonelli, M., Van hoorickx, C., &amp; Hornikx, M. (2025). A neural network for predicting with the diffusion equation: A case study of long rooms. Forum Acusticum.</unstructured_citation>
+          </citation>
+          <citation key="Fichera:2024">
+            <article_title>Determination of a diffusion coefficient function for long rooms using a least square optimization approach</article_title>
+            <author>Fichera</author>
+            <journal_title>Internoise 2024</journal_title>
+            <cYear>2024</cYear>
+            <unstructured_citation>Fichera, I., Van hoorickx, C., &amp; Hornikx, M. (2024). Determination of a diffusion coefficient function for long rooms using a least square optimization approach. Internoise 2024.</unstructured_citation>
+          </citation>
+          <citation key="Fichera_acousticDE_2025">
+            <article_title>acousticDE</article_title>
+            <author>Fichera</author>
+            <journal_title>GitHub repository</journal_title>
+            <cYear>2025</cYear>
+            <unstructured_citation>Fichera, I., Van hoorickx, C., &amp; Hornikx, M. (2025). acousticDE. In GitHub repository (Version 0.1.0). GitHub. https://github.com/Building-acoustics-TU-Eindhoven/acousticDE</unstructured_citation>
+          </citation>
+          <citation key="Scheibler:2018">
+            <article_title>Pyroomacoustics: A python package for audio room simulations and array processing algorithms</article_title>
+            <author>Scheibler</author>
+            <cYear>2018</cYear>
+            <unstructured_citation>Scheibler, R., Bezzam, E., &amp; Dokmanić, I. (2018). Pyroomacoustics: A python package for audio room simulations and array processing algorithms.</unstructured_citation>
+          </citation>
+          <citation key="pyroomacoustics">
+            <article_title>pyroomacoustics</article_title>
+            <author>LCAV</author>
+            <journal_title>GitHub repository</journal_title>
+            <cYear>2025</cYear>
+            <unstructured_citation>LCAV. (2025). pyroomacoustics. In GitHub repository (Version v0.7.7). GitHub. https://github.com/LCAV/pyroomacoustics</unstructured_citation>
+          </citation>
+          <citation key="borrel-jensen2023sound">
+            <article_title>Sound propagation in realistic interactive 3D scenes with parameterized sources using deep neural operators</article_title>
+            <author>Borrel-Jensen</author>
+            <journal_title>Proceedings of the National Academy of Sciences</journal_title>
+            <issue>48</issue>
+            <volume>120</volume>
+            <cYear>2023</cYear>
+            <unstructured_citation>Borrel-Jensen, N., Goswami, S., Engsig-Karup, A. P., Karniadakis, G. E., &amp; Jeong, C.-H. (2023). Sound propagation in realistic interactive 3D scenes with parameterized sources using deep neural operators. Proceedings of the National Academy of Sciences, 120(48), e2312159120.</unstructured_citation>
+          </citation>
+          <citation key="deeponet:2025">
+            <article_title>DeepONet of Acoustic Wave Propagation</article_title>
+            <author>Borrel-Jensen</author>
+            <journal_title>GitHub repository</journal_title>
+            <cYear>2025</cYear>
+            <unstructured_citation>Borrel-Jensen, N. (2025). DeepONet of Acoustic Wave Propagation. In GitHub repository (Version v0.2). GitHub. https://github.com/dtu-act/deeponet-acoustic-wave-prop</unstructured_citation>
+          </citation>
+          <citation key="wang2024open">
+            <article_title>An open-source time-domain wave-based room acoustic software in python based on the nodal discontinuous galerkin method</article_title>
+            <author>Wang</author>
+            <journal_title>INTER-NOISE and NOISE-CON congress and conference proceedings</journal_title>
+            <volume>270</volume>
+            <doi>https://doi.org/10.3397/IN_2024_3868</doi>
+            <cYear>2024</cYear>
+            <unstructured_citation>Wang, H., Palha, A., &amp; Hornikx, M. (2024). An open-source time-domain wave-based room acoustic software in python based on the nodal discontinuous galerkin method. INTER-NOISE and NOISE-CON Congress and Conference Proceedings, 270, 6770–6777. https://doi.org/https://doi.org/10.3397/IN_2024_3868</unstructured_citation>
+          </citation>
+          <citation key="Xu:2024">
+            <article_title>Simulating room transfer functions between transducers mounted on audio devices using a modified image source method</article_title>
+            <author>Xu</author>
+            <journal_title>Journal of the Acoustical Society of America</journal_title>
+            <issue>1</issue>
+            <volume>155</volume>
+            <doi>https://doi.org/10.1121/10.0023935</doi>
+            <cYear>2024</cYear>
+            <unstructured_citation>Xu, Z., Herzog, A., Lodermeyer, A., Habets, E. A. P., &amp; Prinn, A. G. (2024). Simulating room transfer functions between transducers mounted on audio devices using a modified image source method. Journal of the Acoustical Society of America, 155(1), 343–357. https://doi.org/https://doi.org/10.1121/10.0023935</unstructured_citation>
+          </citation>
+          <citation key="DEISM">
+            <article_title>Diffraction Enhanced Image Source Method - Arbitrary Room Geometry (DEISM-ARG)</article_title>
+            <author>audiolabs</author>
+            <journal_title>GitHub repository</journal_title>
+            <cYear>2025</cYear>
+            <unstructured_citation>audiolabs. (2025). Diffraction Enhanced Image Source Method - Arbitrary Room Geometry (DEISM-ARG). In GitHub repository (Version v2.2.1.4). GitHub. https://github.com/audiolabs/DEISM/</unstructured_citation>
+          </citation>
+          <citation key="Picaut:2012">
+            <article_title>SPPS, a particle-tracing numerical code for indoor and outdoor sound propagation prediction</article_title>
+            <author>Picaut</author>
+            <journal_title>Acoustics 2012 Nantes</journal_title>
+            <cYear>2012</cYear>
+            <unstructured_citation>Picaut, J., &amp; Fortin, N. (2012). SPPS, a particle-tracing numerical code for indoor and outdoor sound propagation prediction. Acoustics 2012 Nantes, 1417–1422. http://hal.archives-ouvertes.fr/hal-00810894</unstructured_citation>
+          </citation>
+          <citation key="iSimpa">
+            <article_title>i-Simpa</article_title>
+            <author>Universite-Custave-Eiffel</author>
+            <journal_title>GitHub repository</journal_title>
+            <cYear>2020</cYear>
+            <unstructured_citation>Universite-Custave-Eiffel. (2020). i-Simpa. In GitHub repository (Version v1.3.4). GitHub. https://github.com/Universite-Gustave-Eiffel/I-Simpa</unstructured_citation>
+          </citation>
+          <citation key="Saarelma:2014">
+            <article_title>An open source finite-difference time-domain solver for room acoustics using graphics processing units</article_title>
+            <author>Saarelma</author>
+            <journal_title>Forum Acusticum</journal_title>
+            <cYear>2014</cYear>
+            <unstructured_citation>Saarelma, J., &amp; Savioja, L. (2014). An open source finite-difference time-domain solver for room acoustics using graphics processing units. Forum Acusticum.</unstructured_citation>
+          </citation>
+          <citation key="parallelFDTD">
+            <article_title>Parallel FDTD</article_title>
+            <author>AaltoRSE</author>
+            <journal_title>GitHub repository</journal_title>
+            <cYear>2020</cYear>
+            <unstructured_citation>AaltoRSE. (2020). Parallel FDTD. In GitHub repository. GitHub. https://github.com/AaltoRSE/ParallelFDTD/</unstructured_citation>
+          </citation>
+          <citation key="Teymoori:2024">
+            <article_title>Design and evaluation of a user interface for room acoustic software</article_title>
+            <author>Teymoori</author>
+            <cYear>2024</cYear>
+            <unstructured_citation>Teymoori, H. (2024). Design and evaluation of a user interface for room acoustic software. Eindhoven University of Technology.</unstructured_citation>
+          </citation>
+          <citation key="Dijkman:2025">
+            <article_title>Comparing open-source room acoustics simulation tools: Performance and usability insights</article_title>
+            <author>Dijkman</author>
+            <cYear>2025</cYear>
+            <unstructured_citation>Dijkman, L. P. (2025). Comparing open-source room acoustics simulation tools: Performance and usability insights [Master’s thesis]. Eindhoven University of Technology.</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
