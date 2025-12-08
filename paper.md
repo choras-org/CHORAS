@@ -24,6 +24,8 @@ authors:
     affiliation: 1
   - name: Huiqing Wang
     affiliation: 1
+  - name: Lavínia Paganini
+    affiliation: 2
   - name: Zeyu Xu
     affiliation: 3
   - name: Anjana Rajasekhar
@@ -66,62 +68,30 @@ affiliations:
 date: 15 December 2026
 bibliography: paper.bib
 
-# Optional fields if submitting to a AAS journal too, see this blog post:
-# https://blog.joss.theoj.org/2018/12/a-new-collaboration-with-aas-publishing
-aas-doi: 10.3847/xxxxx <- update this with the DOI from AAS once you know it.
-aas-journal: Astrophysical Journal <- The name of the AAS journal.
 ---
 
 # Summary
 
-The forces on stars, galaxies, and dark matter under external gravitational
-fields lead to the dynamical evolution of structures in the universe. The orbits
-of these bodies are therefore key to understanding the formation, history, and
-future state of galaxies. The field of "galactic dynamics," which aims to model
-the gravitating components of galaxies to study their structure and evolution,
-is now well-established, commonly taught, and frequently used in astronomy.
-Aside from toy problems and demonstrations, the majority of problems require
-efficient numerical tools, many of which require the same base code (e.g., for
-performing numerical orbit integration).
-
 # Statement of need
 
-`Gala` is an Astropy-affiliated Python package for galactic dynamics. Python
-enables wrapping low-level languages (e.g., C) for speed without losing
-flexibility or ease-of-use in the user-interface. The API for `Gala` was
-designed to provide a class-based and user-friendly interface to fast (C or
-Cython-optimized) implementations of common operations such as gravitational
-potential and force evaluation, orbit integration, dynamical transformations,
-and chaos indicators for nonlinear dynamics. `Gala` also relies heavily on and
-interfaces well with the implementations of physical units and astronomical
-coordinate systems in the `Astropy` package [@astropy] (`astropy.units` and
-`astropy.coordinates`).
+The field of simulating room acoustics 
 
-`Gala` was designed to be used by both astronomical researchers and by
-students in courses on gravitational dynamics or astronomy. It has already been
-used in a number of scientific publications [@Pearson:2017] and has also been
-used in graduate courses on Galactic dynamics to, e.g., provide interactive
-visualizations of textbook material [@Binney:2008]. The combination of speed,
-design, and support for Astropy functionality in `Gala` will enable exciting
-scientific explorations of forthcoming data releases from the *Gaia* mission
-[@gaia] by students and experts alike.
+Although in recent years, an increasing amount of effort has been put in making these software open source, many live on their own repository and require technical know-how to be used [@Hornikx:2024].
 
-# Mathematics
+The Community Hub for Open-source Room Acoustics Software (CHORAS) aims [@Willemsen:2024]
 
-Single dollars ($) are required for inline mathematics e.g. $f(x) = e^{\pi/x}$
+[@CHORAS]
 
-Double dollars make self-standing equations:
+The goal of CHORAS is threefold:
 
-$$\Theta(x) = \left\{\begin{array}{l}
-0\textrm{ if } x < 0\cr
-1\textrm{ else}
-\end{array}\right.$$
+1. to provide a platform for researchers to bring their software closer to end users.
+2. to allow (non-technical) end-users an easy way to use existing simulation methods
+3. to create an easy way for various room acoustics simulation methods to be compared.
 
-You can also use plain \LaTeX for equations
-\begin{equation}\label{eq:fourier}
-\hat f(\omega) = \int_{-\infty}^{\infty} f(x) e^{i\omega x} dx
-\end{equation}
-and refer to \autoref{eq:fourier} from text.
+Altogether, CHORAS intends to increase the impact of the collecive work if the room acoustics simulation community
+
+CHORAS is a collaboration between various universities and institutes working on room acoustics simulation software, front-end developers, acoustic consultants (i.e., the end user).
+
 
 # Citations
 
@@ -148,7 +118,6 @@ Figure sizes can be customized by adding an optional second parameter:
 
 # Acknowledgements
 
-We acknowledge contributions from Brigitta Sipocz, Syrtis Major, and Semyeong
-Oh, and support from Kathryn Johnston during the genesis of this project.
+Ajat Dajorat, Radhea Amardika, Fachri Hawari
 
 # References
