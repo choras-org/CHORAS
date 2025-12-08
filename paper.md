@@ -2,34 +2,49 @@
 title: 'Gala: A Python package for galactic dynamics'
 tags:
   - Python
-  - astronomy
-  - dynamics
-  - galactic dynamics
-  - milky way
+  - room acoustics
+  - simulation
+  - web interface
+  - React
 authors:
-  - name: Adrian M. Price-Whelan
-    orcid: 0000-0000-0000-0000
-    equal-contrib: true
-    affiliation: "1, 2" # (Multiple affiliations must be quoted)
-  - name: Author Without ORCID
-    equal-contrib: true # (This is how you can denote equal contributions between multiple authors)
-    affiliation: 2
-  - name: Author with no affiliation
+  - name: Silvin Willemsen
+    orcid: 0000-0002-4062-5473
     corresponding: true # (This is how to denote the corresponding author)
+    equal-contrib: true
+    affiliation: 1 # (Multiple affiliations must be quoted)
+  - name: Marco Berzborn
+    corresponding: true # (This is how to denote the corresponding author)
+    equal-contrib: true # (This is how you can denote equal contributions between multiple authors)
+    affiliation: 1
+  - name: Alexander Nolte
+    affiliation: 2
+  - name: Alexander Serebrenik
+    affiliation: 2
+  - name: Ilaria Fichera
+    affiliation: 1
+  - name: Huiqing Wang
+    affiliation: 1
+  - name: Zeyu Xu
     affiliation: 3
-  - given-names: Ludwig
-    dropping-particle: van
-    surname: Beethoven
+  - name: Anjana Rajasekhar
     affiliation: 3
+  - name: Albert Prinn
+    affiliation: 4
+  - name: Maarten Hornikx
+    corresponding: true # (This is how to denote the corresponding author)
+    equal-contrib: true
+    affiliation: 1
 affiliations:
- - name: Lyman Spitzer, Jr. Fellow, Princeton University, United States
+ - name: Department of the Built Environment, Eindhoven University of Technology, The Netherlands
+   ror: https://ror.org/02c2kyt77
    index: 1
-   ror: 00hx57361
- - name: Institution Name, Country
+ - name: Department of Mathematics and Computer Science, Eindhoven University of Technology, The Netherlands
    index: 2
- - name: Independent Researcher, Country
+ - name: International Audio Laboratories Erlangen, Germany.
    index: 3
-date: 13 August 2017
+ - name: Fraunhofer Institute for Integrated Circuits IIS, Erlangen, Germany.
+   index: 4
+date: 15 December 2026
 bibliography: paper.bib
 
 # Optional fields if submitting to a AAS journal too, see this blog post:
