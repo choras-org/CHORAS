@@ -13,24 +13,32 @@ authors:
     equal-contrib: true
     affiliation: 1 # (Multiple affiliations must be quoted)
   - name: Marco Berzborn
+    orcid: 0000-0002-4421-1702
     corresponding: true # (This is how to denote the corresponding author)
     equal-contrib: true # (This is how you can denote equal contributions between multiple authors)
     affiliation: 1
   - name: Alexander Nolte
+    orcid: 0000-0003-1255-824X
     affiliation: 2
   - name: Alexander Serebrenik
+    orcid: 0000-0002-1418-0095
     affiliation: 2
   - name: Ilaria Fichera
+    orcid: 0000-0002-0097-1486
     affiliation: 1
   - name: Huiqing Wang
+    orcid: 0000-0003-3465-3555
     affiliation: 1
   - name: Lavínia Paganini
+    orcid: 0000-0002-2729-0314
     affiliation: 2
   - name: Zeyu Xu
+    orcid: 0000-0002-4158-6218
     affiliation: 3
   - name: Anjana Rajasekhar
     affiliation: 3
   - name: Albert Prinn
+    orcid: 0000-0003-3491-3644
     affiliation: 4
   - name: Nicolas Fortin
     affiliation: 5  
@@ -42,6 +50,12 @@ authors:
     affiliation: 7
   - name: Lauri Savioja
     affiliation: 7
+  - name: Ajat Dajorat
+    affiliation: 8
+  - name: Radhea Amardika
+    affiliation: 8
+  - name: Fachri Hawari
+    affiliation: 8
   - name: Maarten Hornikx
     corresponding: true # (This is how to denote the corresponding author)
     equal-contrib: true
@@ -60,9 +74,9 @@ affiliations:
    index: 5
  - name: Pasteur Labs, USA.
    index: 6
- - name: School of Science, Aalto, Finland.
-   index: 7
  - name: Department of Computer Science, Aalto, Finland.
+   index: 7
+ - name: Hacktiv8, Indonesia.
    index: 8
 
 date: 15 December 2026
@@ -78,7 +92,7 @@ The field of simulating room acoustics
 
 Although in recent years, an increasing amount of effort has been put in making these software open source, many live on their own repository and require technical know-how to be used [@Hornikx:2024].
 
-The Community Hub for Open-source Room Acoustics Software (CHORAS) aims [@Willemsen:2024]
+The Community Hub for Open-source Room Acoustics Software (CHORAS) aims [@Willemsen:2025]
 
 [@CHORAS]
 
@@ -93,6 +107,12 @@ Altogether, CHORAS intends to increase the impact of the collecive work if the r
 CHORAS is a collaboration between various universities and institutes working on room acoustics simulation software, front-end developers, acoustic consultants (i.e., the end user).
 
 
+Room acoustics simuation methods already coupled:
+- The acoustic diffusion equation (DE) (software: [@Fichera_acousticDE_2025])
+- Discontinuous Galerkin (DG) method (paper: [@Wang_DG_RoomAcoustics_2024], repository: [@wang2024open])
+- Pyroomacoustics (paper: [@Scheibler:2018], software: [@pyroomacoustics])
+- DEISM (paper: [@Xu:2024], software: [@DEISM])
+- DeepONet (paper: [@borrel-jensen2023sound], software: [@deeponet:2025])
 # Citations
 
 Citations to entries in paper.bib should be in
