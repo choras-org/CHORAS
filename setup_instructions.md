@@ -41,6 +41,14 @@ docker compose up
 
 <img width="446" height="236" alt="choras" src="https://github.com/user-attachments/assets/f21f65f0-c667-4534-81cf-ac37d0fa36f1" />
 
-5. Try to set up a simulation and view the results! 
+If the page shows an error saying showing something like "Project not found", please try removing all associated containers and volumes. You can do so by running the following command in your terminal:
+
+```shell
+docker compose down -v
+```
+
+Then, run `docker compose up` again and refresh the page.
+
+5. Try to set up a simulation and view the results!
 
     *Tip: start with the [./example_geometries/MeasurementRoom.obj](./example_geometries/MeasurementRoom.obj) and choose **Upholstered concert chairs** as a material for all surfaces.*
