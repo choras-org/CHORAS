@@ -133,10 +133,10 @@ Room acoustics simulation methods which are already coupled:
 | DeepONet                              | @borrel-jensen2023sound      | @deeponet:2025           |
 | ParallelFDTD                          | @Saarelma:2014               | @parallelFDTD            |
 
-As each of these simulation methods has its own set of parameters.
+_more here? maybe something about each simulation method having its own set of parameters, but that we aim for most parameters to be the same for all methods.._
 
 # Acknowledgements
 
-The authors would like to thank Sil de Graaf for the graphic design. Finally, the authors appreciate the help of John Bons for his guidance on cloud deployment.
+The authors would like to thank Sil de Graaf for the graphic design of the CHORAS. Finally, the authors appreciate the help of John Bons for his guidance on cloud deployment.
 
 # References

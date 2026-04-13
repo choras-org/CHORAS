@@ -6,8 +6,8 @@
            version="5.3.1"
            xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
   <head>
-    <doi_batch_id>20251216141920-e1c686da59394e25467283acc4724bd179857eac</doi_batch_id>
-    <timestamp>20251216141920</timestamp>
+    <doi_batch_id>20251216143901-e1c686da59394e25467283acc4724bd179857eac</doi_batch_id>
+    <timestamp>20251216143901</timestamp>
     <depositor>
       <depositor_name>JOSS Admin</depositor_name>
       <email_address>admin@theoj.org</email_address>
@@ -245,16 +245,16 @@
           <citation key="Hornikx:2024">
             <article_title>Exploring the current landscape of open research software in room acoustics</article_title>
             <author>Hornikx</author>
-            <journal_title>Proc. Of 53rd int. Congress &amp; exposition on noise control engineering, inter.noise24</journal_title>
+            <journal_title>Internoise 2024</journal_title>
             <cYear>2024</cYear>
-            <unstructured_citation>Hornikx, M., Wang, H., Fichera, I., Paganini, L., Nolte, A., &amp; Serebrenik, A. (2024). Exploring the current landscape of open research software in room acoustics. Proc. Of 53rd Int. Congress &amp; Exposition on Noise Control Engineering, Inter.noise24, 5875–5884. \url{https://doi.org/10.3397/IN_2024_3656}</unstructured_citation>
+            <unstructured_citation>Hornikx, M., Wang, H., Fichera, I., Paganini, L., Nolte, A., &amp; Serebrenik, A. (2024). Exploring the current landscape of open research software in room acoustics. Internoise 2024, 5875–5884. \url{https://doi.org/10.3397/IN_2024_3656}</unstructured_citation>
           </citation>
           <citation key="Willemsen:2025">
             <article_title>Towards a community hub for open-source room acoustics software</article_title>
             <author>Willemsen</author>
-            <journal_title>11th EAA annual european conference on acoustics and noise control engineering, forum acusticum / euronoise 2025</journal_title>
+            <journal_title>Forum acusticum / euronoise 2025</journal_title>
             <cYear>2025</cYear>
-            <unstructured_citation>Willemsen, S., Teymoori, H., Fichera, I., Wang, H., Nolte, A., Serebrenik, A., &amp; Hornikx, M. (2025). Towards a community hub for open-source room acoustics software. 11th EAA Annual European Conference on Acoustics and Noise Control Engineering, Forum Acusticum / Euronoise 2025.</unstructured_citation>
+            <unstructured_citation>Willemsen, S., Teymoori, H., Fichera, I., Wang, H., Nolte, A., Serebrenik, A., &amp; Hornikx, M. (2025). Towards a community hub for open-source room acoustics software. Forum Acusticum / Euronoise 2025.</unstructured_citation>
           </citation>
           <citation key="CHORAS">
             <article_title>CHORAS</article_title>
@@ -274,9 +274,9 @@
           <citation key="Fichera:2025">
             <article_title>A neural network for predicting with the diffusion equation: A case study of long rooms</article_title>
             <author>Fichera</author>
-            <journal_title>Forum acusticum</journal_title>
+            <journal_title>Forum acusticum / euronoise 2025</journal_title>
             <cYear>2025</cYear>
-            <unstructured_citation>Fichera, I., Deleforge, A., Foy, C., Pascal, J.-D., Prax, C., Tonelli, M., Van hoorickx, C., &amp; Hornikx, M. (2025). A neural network for predicting with the diffusion equation: A case study of long rooms. Forum Acusticum.</unstructured_citation>
+            <unstructured_citation>Fichera, I., Deleforge, A., Foy, C., Pascal, J.-D., Prax, C., Tonelli, M., Van hoorickx, C., &amp; Hornikx, M. (2025). A neural network for predicting with the diffusion equation: A case study of long rooms. Forum Acusticum / Euronoise 2025.</unstructured_citation>
           </citation>
           <citation key="Fichera:2024">
             <article_title>Determination of a diffusion coefficient function for long rooms using a least square optimization approach</article_title>
@@ -324,11 +324,11 @@
           <citation key="wang2024open">
             <article_title>An open-source time-domain wave-based room acoustic software in python based on the nodal discontinuous galerkin method</article_title>
             <author>Wang</author>
-            <journal_title>INTER-NOISE and NOISE-CON congress and conference proceedings</journal_title>
+            <journal_title>Internoise 2024</journal_title>
             <volume>270</volume>
             <doi>https://doi.org/10.3397/IN_2024_3868</doi>
             <cYear>2024</cYear>
-            <unstructured_citation>Wang, H., Palha, A., &amp; Hornikx, M. (2024). An open-source time-domain wave-based room acoustic software in python based on the nodal discontinuous galerkin method. INTER-NOISE and NOISE-CON Congress and Conference Proceedings, 270, 6770–6777. https://doi.org/https://doi.org/10.3397/IN_2024_3868</unstructured_citation>
+            <unstructured_citation>Wang, H., Palha, A., &amp; Hornikx, M. (2024). An open-source time-domain wave-based room acoustic software in python based on the nodal discontinuous galerkin method. Internoise 2024, 270, 6770–6777. https://doi.org/https://doi.org/10.3397/IN_2024_3868</unstructured_citation>
           </citation>
           <citation key="Xu:2024">
             <article_title>Simulating room transfer functions between transducers mounted on audio devices using a modified image source method</article_title>
