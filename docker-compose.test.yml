@@ -1,0 +1,19 @@
+   services:
+     db-test:
+       image: postgres:14
+       environment:
+         POSTGRES_DB: choras_test
+         POSTGRES_USER: test_user
+         POSTGRES_PASSWORD: test_pass
+       ports:
+         - "5433:5432"  # Different port to not conflict with dev
+   
+     backend-test:
+       build:
+         context: ./backend
+       environment:
+         DATABASE_URL: postgresql://test_user:test_pass@db-test:5432/choras_test
+         TESTING: "true"
+       depends_on:
+         - db-test
+       command: pytest
