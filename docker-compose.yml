@@ -18,8 +18,8 @@ services:
   frontend:
     platform: linux/amd64
     build:
-      context: ./frontend-v2   # path to your local frontend Dockerfile
-      dockerfile: Dockerfile    # optional if named Dockerfile
+      context: ./frontend-v2 # path to your local frontend Dockerfile
+      dockerfile: Dockerfile # optional if named Dockerfile
     ports:
       - "5173:5173"
     environment:
@@ -42,7 +42,7 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./uploads:/app/uploads
-      - ./simulation-backend:/app/simulation-backend 
+      - ./simulation-backend:/app/simulation-backend
       # - /c/Users/20255413/.ssh:/root/.ssh:ro
 
   # BUILD-ONLY: DE simulation (profile: sim_method)
@@ -53,9 +53,9 @@ services:
       dockerfile: de_method/Dockerfile
     image: de_image:latest
     profiles:
-      - sim_method  # Skipped in docker compose up
-      
-  # BUILD-ONLY: DG simulation (profile: sim_method)  
+      - sim_method # Skipped in docker compose up
+
+  # BUILD-ONLY: DG simulation (profile: sim_method)
   dg-method:
     platform: linux/amd64
     build:
@@ -63,7 +63,7 @@ services:
       dockerfile: dg_method/Dockerfile
     image: dg_image:latest
     profiles:
-      - sim_method  # Skipped in docker compose up
+      - sim_method # Skipped in docker compose up
 
 volumes:
   postgresql_data:
