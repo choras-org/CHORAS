@@ -1,3 +1,5 @@
+#Build command: docker compose --profile sim_method build
+#Run command: docker compose up #you dont need to run the simulation methods' containers
 services:
   db_service:
     platform: linux/amd64
@@ -15,19 +17,21 @@ services:
 
   frontend:
     platform: linux/amd64
-    pull_policy: always
-    image: silvinwillemsen/choras-frontend:latest
+    build:
+      context: ./frontend-v2 # path to your local frontend Dockerfile
+      dockerfile: Dockerfile # optional if named Dockerfile
     ports:
       - "5173:5173"
     environment:
-      - REACT_APP_API_URL=http://localhost:5001
+      - REACT_APP_API_URL=http://backend:5001
     depends_on:
       - backend
 
   backend:
     platform: linux/amd64
-    pull_policy: always
-    image: silvinwillemsen/choras-backend:latest
+    build:
+      context: . #root of choras
+      dockerfile: backend/Dockerfile
     ports:
       - "5001:5001"
     env_file:
@@ -35,6 +39,31 @@ services:
     depends_on:
       - db_service
       - redis
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./uploads:/app/uploads
+      - ./simulation-backend:/app/simulation-backend
+      # - /c/Users/20255413/.ssh:/root/.ssh:ro
+
+  # BUILD-ONLY: DE simulation (profile: sim_method)
+  de-method:
+    platform: linux/amd64
+    build:
+      context: ./simulation-backend
+      dockerfile: de_method/Dockerfile
+    image: de_image:latest
+    profiles:
+      - sim_method # Skipped in docker compose up
+
+  # BUILD-ONLY: DG simulation (profile: sim_method)
+  dg-method:
+    platform: linux/amd64
+    build:
+      context: ./simulation-backend
+      dockerfile: dg_method/Dockerfile
+    image: dg_image:latest
+    profiles:
+      - sim_method # Skipped in docker compose up
 
 volumes:
   postgresql_data:
