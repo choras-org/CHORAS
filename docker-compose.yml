@@ -65,5 +65,15 @@ services:
     profiles:
       - sim_method # Skipped in docker compose up
 
+  # BUILD-ONLY: MoD-ART simulation (profile: sim_method)
+  modart-method:
+    platform: linux/amd64
+    build:
+      context: ./simulation-backend
+      dockerfile: modart_method/Dockerfile
+    image: modart_image:latest
+    profiles:
+      - sim_method # Skipped in docker compose up
+
 volumes:
   postgresql_data:
