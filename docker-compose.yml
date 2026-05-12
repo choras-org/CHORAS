@@ -64,6 +64,15 @@ services:
     image: dg_image:latest
     profiles:
       - sim_method # Skipped in docker compose up
+  
+  deeponet-method:
+    platform: linux/amd64
+    build:
+      context: ./simulation-backend
+      dockerfile: deeponet_method/Dockerfile
+    image: deeponet_image:latest
+    profiles:
+      - sim_method # Skipped in docker compose up
 
 volumes:
   postgresql_data:
