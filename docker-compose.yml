@@ -72,6 +72,14 @@ services:
       context: ./simulation-backend
       dockerfile: pyroomacoustics_method/Dockerfile
     image: pyroomacoustics_image:latest
+
+  # BUILD-ONLY: sparrowpy simulation (profile: sim_method)
+  sparrowpy-method:
+    platform: linux/amd64
+    build:
+      context: ./simulation-backend
+      dockerfile: sparrowpy_method/Dockerfile
+    image: sparrowpy_image:latest
     profiles:
       - sim_method # Skipped in docker compose up
 
