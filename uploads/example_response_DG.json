@@ -1,0 +1,57 @@
+{
+    "absorption_coefficients": {
+        "3891f2de-2e44-e845-971c-ba16ffa3490a": "0.02, 0.03, 0.04, 0.08, 0.15",
+        "b7425f8d-e3db-bb49-8132-48ed3daaf5d3": "0.02, 0.03, 0.04, 0.08, 0.15",
+        "b8f9b643-11f6-0141-9c7d-0a6d3f26ac7e": "0.02, 0.03, 0.04, 0.08, 0.15",
+        "ce19032d-89f3-fd48-8e2d-a4d517172d46": "0.02, 0.03, 0.04, 0.08, 0.15",
+        "e1d5373b-388c-b34f-86df-ea89f8444507": "0.02, 0.03, 0.04, 0.08, 0.15",
+        "fcc042f9-29db-894b-83b3-e35baee33ca6": "0.02, 0.03, 0.04, 0.08, 0.15"
+    },
+    "msh_path": "/app/uploads/MeasurementRoom_8e231cbeebf74ab5b5f262d8935d3b03.msh",
+    "geo_path": "/app/uploads/MeasurementRoom_8e231cbeebf74ab5b5f262d8935d3b03.geo",
+    "results": [
+        {
+            "label": "Source 1",
+            "orderNumber": 1,
+            "percentage": 100,
+            "sourcePointId": "9e33676d-e249-4584-8ca1-482f6d2f815c",
+            "sourceX": 1,
+            "sourceY": 1,
+            "sourceZ": 1,
+            "resultType": "DG",
+            "frequencies": [
+                125,
+                250,
+                500,
+                1000,
+                2000
+            ],
+            "responses": [
+                {
+                    "label": "Receiver 1",
+                    "orderNumber": 1,
+                    "x": 3,
+                    "y": 3,
+                    "z": 1,
+                    "pointId": "d520804c-ebda-4269-b165-59020f0e30c5",
+                    "parameters": { "edt": [], "t20": [], "t30": [], "c80": [], "d50": [], "ts": [], "spl_t0_freq": []
+                    },
+                    "receiverResults": [ -0.0, -0.135647031937632, -0.6216254198864177, ... ],
+                    "receiverResultsUncorrected": [ 0.5583347186012122, 2.6062971548862675, 5.146715281717349, ... ]
+                }
+            ]
+        }
+    ],
+    "task_id": "1eebd963-e6a8-49d6-86b8-1c9b5d377426",
+    "fs_auralization": 44100,
+    "simulationSettings": {
+        "dg_c0": 343,
+        "dg_cfl": 1,
+        "dg_freq_upper_limit": 200,
+        "dg_ir_length": 0.1,
+        "dg_poly_order": 4,
+        "dg_ppw": 2,
+        "dg_rho0": 1.213
+    },
+    "settingsPreset": "Default"
+}
