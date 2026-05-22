@@ -29,13 +29,19 @@ wsl --update
 cd <your/path/to/CHORAS>
 ```
 
+- Initialize and checkout all submodules:
+
+```shell
+git submodule update --init --recursive
+```
+
 - Run:
 
 ```shell
 sh CHORAS_BUILD.sh
 ```
 
-Or if you're on Windows, try running the batch script:
+Or if you're on Windows, you can alternatively try running the batch script:
 
 ```shell
 CHORAS_BUILD_windows.bat
