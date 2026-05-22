@@ -32,7 +32,13 @@ cd <your/path/to/CHORAS>
 - Run:
 
 ```shell
-docker compose up
+sh CHORAS_BUILD.sh
+```
+
+Or if you're on Windows, try running the batch script:
+
+```shell
+CHORAS_BUILD_windows.bat
 ```
 
 4. Once the process is done, navigate to [http://localhost:5173](http://localhost:5173)
