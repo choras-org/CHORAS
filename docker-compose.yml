@@ -65,5 +65,15 @@ services:
     profiles:
       - sim_method # Skipped in docker compose up
 
+  # BUILD-ONLY: pyroomacoustics simulation (profile: sim_method)
+  pyroomacoustics-method:
+    platform: linux/amd64
+    build:
+      context: ./simulation-backend
+      dockerfile: pyroomacoustics_method/Dockerfile
+    image: pyroomacoustics_image:latest
+    profiles:
+      - sim_method # Skipped in docker compose up
+
 volumes:
   postgresql_data:
