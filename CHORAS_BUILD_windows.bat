@@ -30,4 +30,7 @@ exit /b 0
 :error
 echo.
 echo Build failed with error code %errorlevel%.
+echo.
+echo Press any key to close this window...
+pause >nul
 exit /b %errorlevel%
