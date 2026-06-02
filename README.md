@@ -2,7 +2,7 @@
 
 # CHORAS
 
-This is the public repository for the The Community Hub for Open-source Room Acoustics Software. For documentation on the project, please refer to the [CHORAS documentation pages](https://choras.readthedocs.io/en/latest/).
+This is the public repository for the The Community Hub for Open-source Room Acoustics Software. For installation instructions and documentation on the project, please refer to the [CHORAS documentation pages](https://choras.readthedocs.io/en/latest/).
 
 <img width="1512" height="786" alt="Screenshot 2025-11-04 at 11 23 16" src="https://github.com/user-attachments/assets/b3eb28d6-8a19-49a8-a8a9-08f156b09ef9" />
 
