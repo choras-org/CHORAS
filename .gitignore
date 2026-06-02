@@ -1,3 +1,7 @@
+# local app folders and links
+uploads
+
+# macOS
 .DS_Store
 
 # Byte-compiled / optimized / DLL files
