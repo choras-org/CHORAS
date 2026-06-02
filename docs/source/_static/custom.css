@@ -1,0 +1,18 @@
+:root {
+  --primary: var(--pst-color-primary);
+  --secondary: var(--pst-color-secondary);
+  --font-display: 'Questrial', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+
+.navbar-brand.logo {
+  font-family: var(--font-display);
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-size: 2rem;
+  text-decoration: none;
+}
