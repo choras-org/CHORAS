@@ -47,7 +47,6 @@ services:
 
   # BUILD-ONLY: DE simulation (profile: sim_method)
   de-method:
-    platform: linux/amd64
     build:
       context: ./simulation-backend
       dockerfile: de_method/Dockerfile
