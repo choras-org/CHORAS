@@ -17,7 +17,4 @@ echo "Docker image exported to pyroomacoustics_image.tar"
 docker save -o backend/app/services/executors/sparrowpy_image.tar sparrowpy_image:latest
 echo "Docker image exported to sparrowpy_image.tar"
 
-# docker save -o backend/app/services/executors/pa_image.tar pa_image:latest
-# echo "Docker image exported to pa_image.tar"
-
 docker compose up
