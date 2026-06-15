@@ -9,7 +9,7 @@
 	path = simulation-backend
 	url = https://github.com/dhimashary/simulation-backend.git
 	branch = geometry-pipeline-integration
-[submodule "geometry_pipeline"]
-	path = geometry_pipeline
+[submodule "geometry-pipeline"]
+	path = geometry-pipeline
 	url = https://github.com/dhimashary/geom_pipeline.git
 	branch = dev
