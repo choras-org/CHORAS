@@ -1,0 +1,28 @@
+html[data-theme="light"] {
+  --pst-color-primary: #667eea;
+  --pst-color-secondary: #667eea9a;
+}
+
+html[data-theme="dark"] {
+    --pst-color-primary: #EF7305;
+    --pst-color-secondary: #F4B183;
+}
+
+:root {
+  --primary: var(--pst-color-primary);
+  --secondary: var(--pst-color-secondary);
+  --font-display: 'Questrial', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+
+.navbar-brand.logo {
+  font-family: var(--font-display);
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-size: 2rem;
+  text-decoration: none;
+}
