@@ -8,6 +8,6 @@
 [submodule "simulation-backend"]
 	path = simulation-backend
 	url = https://github.com/choras-org/simulation-backend.git
-[submodule "geom_piepline"]
-	path = geom_piepline
+[submodule "geom_pipeline"]
+	path = geom_pipeline
 	url = git@github.com:dhimashary/geom_pipeline.git
