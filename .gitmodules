@@ -1,6 +1,6 @@
 [submodule "backend"]
 	path = backend
-	url = https://github.com/choras-org/backend.git
+	url = https://github.com/dhimashary/choras-backend.git
 	branch = geometry-pipeline-integration
 [submodule "frontend-v2"]
 	path = frontend-v2
