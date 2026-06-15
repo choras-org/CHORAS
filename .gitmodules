@@ -1,13 +1,15 @@
 [submodule "backend"]
 	path = backend
 	url = https://github.com/choras-org/backend.git
-	branch = strategy-pattern-for-execution-platform
+	branch = geometry-pipeline-integration
 [submodule "frontend-v2"]
 	path = frontend-v2
 	url = https://github.com/choras-org/frontend-v2.git
 [submodule "simulation-backend"]
 	path = simulation-backend
-	url = https://github.com/choras-org/simulation-backend.git
+	url = https://github.com/dhimashary/simulation-backend.git
+	branch = geometry-pipeline-integration
 [submodule "geometry_pipeline"]
 	path = geometry_pipeline
-	url = git@github.com:dhimashary/geom_pipeline.git
+	url = https://github.com/dhimashary/geom_pipeline.git
+	branch = dev
