@@ -14,4 +14,9 @@ echo "Docker image exported to de_image.tar"
 docker save -o backend/app/services/executors/pyroomacoustics_image.tar pyroomacoustics_image:latest
 echo "Docker image exported to pyroomacoustics_image.tar"
 
+# Export misuka_method image for backend executor
+echo "📦 Exporting misuka image..."
+docker save -o backend/app/services/executors/misuka_image.tar misuka_image:latest
+echo "✅ Docker image exported: misuka_image.tar"
+
 docker compose up
