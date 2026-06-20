@@ -4,7 +4,8 @@
 	branch = dev
 [submodule "frontend-v2"]
 	path = frontend-v2
-	url = https://github.com/choras-org/frontend-v2.git
+	url = https://github.com/dhimashary/choras-frontend.git
+	branch = feat/repair-page
 [submodule "simulation-backend"]
 	path = simulation-backend
 	url = https://github.com/dhimashary/simulation-backend.git
