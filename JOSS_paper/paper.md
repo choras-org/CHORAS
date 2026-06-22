@@ -54,6 +54,14 @@ authors:
   - name: Lauri Savioja
     orcid: 0000-0002-8261-4596
     affiliation: 7
+  - name: Konstantinos Chanioglou
+    affiliation: 2 
+  - name: Victor Petre
+    affiliation: 2
+  - name: Sharjeel Maqsood
+    affiliation: 2
+  - name: Saptarshi Mondal
+    affiliation: 2
   - name: Ajat Dajorat
     affiliation: 8
   - name: Radhea Amardika

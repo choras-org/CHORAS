@@ -6,8 +6,8 @@
            version="5.3.1"
            xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
   <head>
-    <doi_batch_id>20251216143901-e1c686da59394e25467283acc4724bd179857eac</doi_batch_id>
-    <timestamp>20251216143901</timestamp>
+    <doi_batch_id>20260615130902-e1c686da59394e25467283acc4724bd179857eac</doi_batch_id>
+    <timestamp>20260615130902</timestamp>
     <depositor>
       <depositor_name>JOSS Admin</depositor_name>
       <email_address>admin@theoj.org</email_address>
@@ -174,6 +174,38 @@
           </person_name>
           <person_name sequence="additional"
                        contributor_role="author">
+            <given_name>Konstantinos</given_name>
+            <surname>Chanioglou</surname>
+            <affiliations>
+              <institution><institution_name>Department of Mathematics and Computer Science, Eindhoven University of Technology, The Netherlands</institution_name></institution>
+            </affiliations>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Victor</given_name>
+            <surname>Petre</surname>
+            <affiliations>
+              <institution><institution_name>Department of Mathematics and Computer Science, Eindhoven University of Technology, The Netherlands</institution_name></institution>
+            </affiliations>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Sharjeel</given_name>
+            <surname>Maqsood</surname>
+            <affiliations>
+              <institution><institution_name>Department of Mathematics and Computer Science, Eindhoven University of Technology, The Netherlands</institution_name></institution>
+            </affiliations>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Saptarshi</given_name>
+            <surname>Mondal</surname>
+            <affiliations>
+              <institution><institution_name>Department of Mathematics and Computer Science, Eindhoven University of Technology, The Netherlands</institution_name></institution>
+            </affiliations>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
             <given_name>Ajat</given_name>
             <surname>Dajorat</surname>
             <affiliations>
@@ -247,7 +279,7 @@
             <author>Hornikx</author>
             <journal_title>Internoise 2024</journal_title>
             <cYear>2024</cYear>
-            <unstructured_citation>Hornikx, M., Wang, H., Fichera, I., Paganini, L., Nolte, A., &amp; Serebrenik, A. (2024). Exploring the current landscape of open research software in room acoustics. Internoise 2024, 5875–5884. \url{https://doi.org/10.3397/IN_2024_3656}</unstructured_citation>
+            <unstructured_citation>Hornikx, M., Wang, H., Fichera, I., Paganini, L., Nolte, A., &amp; Serebrenik, A. (2024). Exploring the current landscape of open research software in room acoustics. Internoise 2024, 5875–5884. https://doi.org/10.3397/IN_2024_3656</unstructured_citation>
           </citation>
           <citation key="Willemsen:2025">
             <article_title>Towards a community hub for open-source room acoustics software</article_title>
