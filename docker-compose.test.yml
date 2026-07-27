@@ -1,19 +1,53 @@
-   services:
-     db-test:
-       image: postgres:14
-       environment:
-         POSTGRES_DB: choras_test
-         POSTGRES_USER: test_user
-         POSTGRES_PASSWORD: test_pass
-       ports:
-         - "5433:5432"  # Different port to not conflict with dev
-   
-     backend-test:
-       build:
-         context: ./backend
-       environment:
-         DATABASE_URL: postgresql://test_user:test_pass@db-test:5432/choras_test
-         TESTING: "true"
-       depends_on:
-         - db-test
-       command: pytest
+# =============================================================================
+# Integration test stack (real Docker, isolated database)
+#
+#   Build + run all integration tests:
+#     docker compose -f docker-compose.test.yml up --build --abort-on-container-exit --exit-code-from backend-test
+#
+#   One-off / iterate:
+#     docker compose -f docker-compose.test.yml run --rm backend-test pytest tests/geometry_pipeline_integration -v
+#
+#   Tear down (and remove the ephemeral test DB volume):
+#     docker compose -f docker-compose.test.yml down -v
+#
+# The db-test service is SEPARATE from the dev `db_service` in docker-compose.yml
+# (different container, different database name `choras_test`, host port 5433).
+# Its data lives on tmpfs, so every run starts from a clean database.
+# =============================================================================
+services:
+  db-test:
+    platform: linux/amd64
+    image: postgres:13
+    environment:
+      POSTGRES_DB: choras_test
+      POSTGRES_USER: test_user
+      POSTGRES_PASSWORD: test_pass
+    ports:
+      - "5433:5432" # host 5433 -> avoid clashing with dev Postgres on 5432
+    tmpfs:
+      - /var/lib/postgresql/data # ephemeral: DB wiped when the container stops
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U test_user -d choras_test"]
+      interval: 2s
+      timeout: 3s
+      retries: 15
+
+  backend-test:
+    platform: linux/amd64
+    build:
+      context: . # repo root, matches the Dockerfile's COPY backend /app
+      dockerfile: backend/Dockerfile
+    env_file:
+      - .env.test
+    depends_on:
+      db-test:
+        condition: service_healthy
+    volumes:
+      # simulation-backend is NOT baked into the image; it is bind-mounted at
+      # runtime (same as the dev stack) so the geometry pipeline imports resolve.
+      - ./simulation-backend:/app/simulation-backend
+      # Mount tests so you can iterate without rebuilding the image.
+      - ./backend/tests:/app/tests
+    # Bypass the gunicorn/celery entrypoint and run the test suite instead.
+    command: >
+      sh -c "pytest tests/geometry_pipeline_integration -v"

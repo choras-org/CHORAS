@@ -1,7 +1,7 @@
 [submodule "backend"]
 	path = backend
 	url = https://github.com/dhimashary/choras-backend.git
-	branch = dev
+	branch = feat/geometry-repair-pipeline
 [submodule "frontend-v2"]
 	path = frontend-v2
 	url = https://github.com/dhimashary/choras-frontend.git
