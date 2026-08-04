@@ -17,7 +17,11 @@ Below you can find instruction on how to set up CHORAS for users and developers,
 
    includes/user_guide.rst
 
+.. toctree::
+   :maxdepth: 1
+   :caption: Geometry Validation & Repair
 
+   includes/geometry_validation/index.rst
 
 .. toctree::
    :maxdepth: 1

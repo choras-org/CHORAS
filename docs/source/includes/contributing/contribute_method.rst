@@ -278,6 +278,7 @@ Here is an example for the ``energy_decay_curve`` for the 125 Hz frequency band
 and its ``times_vector``:
 
 .. code-block:: python
+
    result_container["results"][0]["responses"][i_rec]["receiverResults"].append(
       {
          "data": energy_decay_curve.tolist(),
