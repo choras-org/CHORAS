@@ -7,5 +7,4 @@
 	url = https://github.com/choras-org/frontend-v2.git
 [submodule "simulation-backend"]
 	path = simulation-backend
-	url = https://github.com/ahms5/simulation-backend.git
-	branch = dev_sparrowpy
+	url = https://github.com/choras-org/simulation-backend.git
