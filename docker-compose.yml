@@ -77,7 +77,6 @@ services:
 
   # BUILD-ONLY: misuka simulation
   misuka-method:
-    platform: linux/amd64
     build:
       context: ./simulation-backend
       dockerfile: misuka_method/Dockerfile
