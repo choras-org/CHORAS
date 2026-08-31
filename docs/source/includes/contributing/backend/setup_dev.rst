@@ -47,4 +47,98 @@ This allows you to freely develop and test your changes without affecting the ma
 
       git checkout -b my-feature-branch
 
-7. Now you're ready to start developing. Follow the instructions on the next page to start implementing an interface for your simulation method.
+7. Install dependencies
+
+   .. code-block:: bash
+
+      uv sync --group dev
+
+8. Now you're ready to start developing. Follow the instructions on the next page to start implementing an interface for your simulation method.
+
+Running the Backend Locally
+---------------------------
+
+From the ``backend`` directory:
+
+1. **Create or update the** ``.env`` **file:**
+
+   .. code-block:: bash
+
+      # APP configuration
+      APP_NAME=CHORAS Backend
+      APP_ENV=develop
+
+      # Flask configuration
+      FLASK_APP=app:app
+      FLASK_DEBUG=true
+      APP_SETTINGS_MODULE=config.DevelopConfig
+      APP_TEST_SETTINGS_MODULE=config.TestingConfig
+
+      FLASK_RUN_HOST=0.0.0.0
+      FLASK_RUN_PORT=5000
+
+      # Database (optional — omit to use the default SQLite3 database)
+      DATABASE_URL=postgresql://db_user:db_password@localhost/db_dev
+      DATABASE_TEST_URL=postgresql://db_user:db_password@localhost/db_test
+
+2. **Create database tables and seed initial data:**
+
+   .. code-block:: bash
+
+      flask create-db
+
+3. **Run the development server:**
+
+   .. code-block:: bash
+
+      flask run
+
+4. **Start the Celery worker** (only needed if using async jobs):
+
+   .. code-block:: bash
+
+      celery -A app.celery worker --loglevel=info -P eventlet
+
+Flask CLI Reference
+-------------------
+
+- Create all tables and seed initial data:
+
+  .. code-block:: sh
+
+     flask create-db
+
+- Delete all tables:
+
+  .. code-block:: sh
+
+     flask drop-db
+
+- Reset the database (drop + recreate + seed):
+
+  .. code-block:: sh
+
+     flask reset-db
+
+Database Migrations
+-------------------
+
+The backend uses `Flask-Migrate <https://flask-migrate.readthedocs.io>`_ for schema migrations.
+
+- Initialise the migration repository:
+
+  .. code-block:: sh
+
+     flask db init
+
+- Generate a migration version:
+
+  .. code-block:: sh
+
+     flask db migrate -m "Description"
+
+- Apply the migration:
+
+  .. code-block:: sh
+
+     flask db upgrade
