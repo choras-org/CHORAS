@@ -68,9 +68,6 @@ For more specific instructions for contributing to CHORAS, please check out the 
 - `Documentation guidelines <../backend/documentation.html>`_,
 - `Testing guidelines <../backend/testing.html>`_.
 
-The documentation of each package further provides instructions including the respective commands and tools, please refer to the guide of the package you want to contribute to.
-See for example the guidelines for `contributing to CHORAS <https://choras.readthedocs.io/en/stable/contributing.html>`_.
-
 
 Submitting a Pull Request
 -------------------------
