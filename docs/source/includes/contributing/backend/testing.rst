@@ -10,7 +10,7 @@ New contributions to the CHORAS backend and simulation method interfaces should 
 
 The tests should always be run locally before opening a pull request. In addition, all tests are automatically executed by continuous integration services when a pull request is opened (see the `respective guidelines <../general/pr_workflow.html>`_ for more information).
 
-In the following, you'll find a guideline. Note: these instructions are not generally applicable outside of pyfar.
+In the following, you'll find a couple of guidelines.
 
 - The main tool used for testing is :doc:`pytest<pytest:index>`.
 - All tests are located in the *tests/* folder and can by executed with the ``pytest`` command.
