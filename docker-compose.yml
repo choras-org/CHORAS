@@ -75,5 +75,15 @@ services:
     profiles:
       - sim_method # Skipped in docker compose up
 
+  # BUILD-ONLY: sparrowpy simulation (profile: sim_method)
+  sparrowpy-method:
+    platform: linux/amd64
+    build:
+      context: ./simulation-backend
+      dockerfile: sparrowpy_method/Dockerfile
+    image: sparrowpy_image:latest
+    profiles:
+      - sim_method # Skipped in docker compose up
+
 volumes:
   postgresql_data:
