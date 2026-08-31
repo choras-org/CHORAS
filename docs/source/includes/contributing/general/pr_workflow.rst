@@ -32,11 +32,17 @@
 .. role:: ready-for-pickup
    :class: sd-badge pst-badge github-blue
 
+.. role:: good-first-issue
+   :class: sd-badge pst-badge github-blue
+
+.. role:: help-wanted
+   :class: sd-badge pst-badge github-green
 
 Development Guidelines
 ======================
 
 All CHORAS related projects and packages are developed openly on GitHub.
+Contributions are planned via GitHub issues. If you want to contribute to CHORAS, but don't have a specific idea in mind you can get inspired by browsing the issue pages for the labels :good-first-issue:`good first issue` and :help-wanted:`help wanted`.
 Contributions are managed through issues and pull requests, allowing communication
 between users, developers, and maintainers.
 Pull requests can be proposed from forks of the repository for which a contribution
