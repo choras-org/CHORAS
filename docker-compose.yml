@@ -85,5 +85,14 @@ services:
     profiles:
       - sim_method # Skipped in docker compose up
 
+  # BUILD-ONLY: misuka simulation
+  misuka-method:
+    build:
+      context: ./simulation-backend
+      dockerfile: misuka_method/Dockerfile
+    image: misuka_image:latest
+    profiles:
+      - sim_method
+
 volumes:
   postgresql_data:
