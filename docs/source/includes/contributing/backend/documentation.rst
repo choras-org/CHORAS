@@ -40,3 +40,12 @@ To reset the build, run
     $ make clean
 
 before re-building the documentation.
+
+Exploring the API
+^^^^^^^^^^^^^^^^^
+
+The backend exposes a Swagger UI for browsing and testing the API interactively while the development server is running:
+
+.. code-block:: text
+
+   http://localhost:<port>/swagger-ui
