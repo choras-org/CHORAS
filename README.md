@@ -1,4 +1,5 @@
 [![Documentation Status](https://readthedocs.org/projects/pyfar/badge/?version=latest)](https://pyfar.readthedocs.io/en/latest/?badge=latest)
+[![CHORAS Tests](https://github.com/choras-org/CHORAS/actions/workflows/engd2026.yml/badge.svg)](https://github.com/choras-org/CHORAS/actions/workflows/engd2026.yml)
 
 This is the public repository for the The Community Hub for Open-source Room Acoustics Software. 
 CHORAS is a free, web-based platform for running and comparing room acoustics simulations. Designed for acoustic consultants, researchers, and engineers, it brings together multiple simulation methods in one intuitive interface, so you can focus on results rather than tooling.
