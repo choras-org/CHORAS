@@ -32,6 +32,11 @@ docker save -o backend\app\services\executors\misuka_image.tar misuka_image:late
 if errorlevel 1 goto :error
 echo Docker image exported: misuka_image.tar
 
+echo Exporting modart_image:latest to backend\app\services\executors\modart_image.tar...
+docker save -o backend\app\services\executors\modart_image.tar modart_image:latest
+if errorlevel 1 goto :error
+echo Docker image exported to modart_image.tar
+
 echo Starting Docker Compose...
 docker compose up
 if errorlevel 1 goto :error
