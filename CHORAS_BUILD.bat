@@ -1,13 +1,10 @@
 @echo off
 setlocal
 
-REM Same as CHORAS_BUILD_DEV.bat, but builds each sim method from its tagged
-REM commit in the simulation-backend repo (docker-compose.release.yml) instead
-REM of the local submodule checkout. See "CHORAS Versioning.md".
 REM Exit early if any command fails by checking errorlevel after each step.
 
 echo Building Docker images...
-docker compose -f docker-compose.yml -f docker-compose.release.yml --profile sim_method build
+docker compose --profile sim_method build
 if errorlevel 1 goto :error
 
 echo Exporting dg_image:latest to backend\app\services\executors\dg_image.tar...
@@ -41,7 +38,7 @@ if errorlevel 1 goto :error
 echo Docker image exported to modart_image.tar
 
 echo Starting Docker Compose...
-docker compose -f docker-compose.yml -f docker-compose.release.yml up
+docker compose up
 if errorlevel 1 goto :error
 
 echo Done.
