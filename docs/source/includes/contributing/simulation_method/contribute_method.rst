@@ -7,7 +7,9 @@ Each simulation method interface in CHORAS is implemented in the format of a Pyt
 The CHORAS backend shares information and data with the simulation methods via JSON files.
 When a simulation is scheduled, the backend writes a JSON file with all required configurations and input data.
 The simulation method's interface executes the simulation based on the provided configuration and extends the same JSON
-file with progress updates and finally the results, which are then read by the backend.
+file with progress updates and finally the results, which are then returned and read by the backend.
+Since the each simulation method is executed in an encapsulated container and does not have access to the backend, the JSON file is the only way to communicate with the backend.
+Accordingly, also error messages are requred to be written to the JSON file, so that the backend can read and forward them to the frontend where they are displayed for the user.
 
 
 Creating the Scaffolding
@@ -230,6 +232,55 @@ Edit the test JSON template to include your method-specific settings in the
        "your_setting_2": value2
    }
 
+Writing Error Messages to the JSON File
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+As mentioned above, the simulation method interface is executed in an encapsulated container and does not have access to the backend.
+To surface error messages to the user, they need to be forwarded to the backend via the JSON file.
+This can be done by writing the error type and message to the ``error`` field in the JSON file.
+
+.. code-block:: python
+
+   json_config_file['error'] = {
+        'type': "RuntimeError",
+        'message': "Simulation failed due to ....",
+   }
+
+
+For convenience, it is recommended to catch exceptions in the main function implemented in ``__cli__.py`` of your method to avoid redundant error handling.
+An example is given below:
+
+.. code-block:: python
+
+   def main() -> None:
+       # JSON path in the uploads folder. This variable is set for the
+       # container when it is started up.
+       json_file_path = os.environ.get("JSON_PATH")
+
+       simulation_method_object = MySimulationMethod(json_file_path)
+       try:
+           simulation_method_object.run_simulation()
+       except Exception as e:
+           # Write error to result JSON so backend can read it
+           with open(json_file_path) as f:
+               json_config_file = json.load(f)
+           json_config_file['error'] = {
+               'type': type(e).__name__,
+               'message': str(e),
+           }
+           with open(json_file_path, 'w') as f:
+               json.dump(json_config_file, f, indent=4)
+
+           # Ensure the container exits with exit code 1 to indicate failure
+           # The status code is used by the backend to determine if the simulation
+           # was successful or not.
+           sys.exit(1)
+
+       # Save the results to a separate file
+       simulation_method_object.save_results()
+
+
+In the example, any exception raised during the execution of ``run_simulation()`` is caught and written to the JSON file, so that the backend can read it and forward it to the frontend for display to the user.
 
 Common Patterns
 ---------------

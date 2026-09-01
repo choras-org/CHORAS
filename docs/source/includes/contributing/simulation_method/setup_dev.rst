@@ -1,5 +1,5 @@
-Getting Started
-===============
+Setting up your development environment
+=======================================
 
 Ready to contribute? Here's how to set up your development environment for CHORAS.
 We always recommend creating a `fork <https://docs.github.com/en/get-started/quickstart/fork-a-repo/>`_ of the repository you would like to contribute to.
