@@ -1,12 +1,8 @@
 #!/bin/bash
 set -e
 
-# Same as CHORAS_BUILD_DEV.sh, but builds each sim method from its tagged
-# commit in the simulation-backend repo (docker-compose.release.yml) instead
-# of the local submodule checkout. See "CHORAS Versioning.md".
-
 # Build images
-docker compose -f docker-compose.yml -f docker-compose.release.yml --profile sim_method build
+docker compose --profile sim_method build
 
 # Save the image as a tar file (replace with your actual image name:tag)
 docker save -o backend/app/services/executors/dg_image.tar dg_image:latest
@@ -27,4 +23,4 @@ echo "Docker image exported: misuka_image.tar"
 docker save -o backend/app/services/executors/modart_image.tar modart_image:latest
 echo "Docker image exported to modart_image.tar"
 
-docker compose -f docker-compose.yml -f docker-compose.release.yml up
+docker compose up
