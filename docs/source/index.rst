@@ -24,3 +24,9 @@ Below you can find instruction on how to set up CHORAS for users and developers,
    :caption: Contribution Guidelines
 
    includes/contributing.rst
+
+.. toctree::
+   :maxdepth: 1
+   :caption: History
+
+   includes/history.rst
