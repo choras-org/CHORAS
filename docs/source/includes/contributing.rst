@@ -22,6 +22,7 @@ The following steps will help you navigate the process.
    contributing/backend/documentation.rst
    contributing/backend/testing.rst
    contributing/backend/setup_dev.rst
+   contributing/backend/releasing.rst
 
 .. toctree::
    :caption: Contributing a new simulation method
@@ -30,6 +31,7 @@ The following steps will help you navigate the process.
    contributing/simulation_method/setup_dev.rst
    contributing/simulation_method/contribute_method.rst
    contributing/simulation_method/configuring.rst
+   contributing/simulation_method/releasing.rst
 
 .. toctree::
    :caption: Contributing to the frontend
