@@ -10,7 +10,7 @@ When preparing for a new major or minor release, please merge the dev branch int
 Patch releases are directly made on the main branch without merging from dev.
 The following steps are then required to prepare a new release:
 
-- Make sure that the changelog in HISTORY.rst is up to date and update if neccessary.
+- Make sure that the changelog in ``HISTORY.rst`` is up to date and update if necessary.
 - Commit all required changes.
 - Run the test suite and ensure that all tests pass.
 

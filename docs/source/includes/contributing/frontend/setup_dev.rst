@@ -54,10 +54,10 @@ This allows you to freely develop and test your changes without affecting the ma
 Quickstart developing
 ---------------------
 
-To setup the development environment for the fronent follow these steps:
+To set up the development environment for the frontend, follow these steps:
 
 1. Install `node.js <https://nodejs.org/en/>`_ on your machine.
-2. Once installed run the following commands navigated to the folder you want the CHORAS frontend to live:
+2. Once installed, run the following commands while navigating to the folder where you want the CHORAS frontend to live:
 
    .. code-block:: shell
 

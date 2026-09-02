@@ -36,9 +36,9 @@ Prepare the release
 Incrementing the version number
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Each method carries has an individual configuration for ``bumpversion`` section inside its
-``<method>_method/pyproject.toml``
-On use, bumpversion will set a method specific git tag (e.g. ``dg-v{new_version}``).
+Each method has an individual configuration for the ``bumpversion`` section inside its
+``<method>_method/pyproject.toml``.
+When run, bumpversion will set a method-specific git tag (e.g. ``dg-v{new_version}``).
 
 **Run the bump command from inside the method's directory** so that
 ``bump-my-version`` picks up the correct config:
