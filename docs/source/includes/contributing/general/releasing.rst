@@ -25,22 +25,25 @@ are not considered for version increments.
 Updating the combined CHORAS version
 ====================================
 
-After tagging a new simulation-backend umbrella release (plain ``vX.Y.Z``), update
-the ``simulation-backend`` submodule pointer in the CHORAS umbrella repo to that tag
-and bump the combined CHORAS version:
+Whenever one or more components (``frontend-v2``, ``backend``, ``simulation-backend``)
+have a new tagged release that should become part of the next validated CHORAS
+combination, update their submodule pointer(s) in the CHORAS umbrella repo and bump
+the combined CHORAS version:
 
-1. Check out ``simulation-backend`` at the new tag:
+1. Check out each updated submodule at its new tag (repeat for every submodule
+   that changed — for ``simulation-backend``, use its own whole-repo tag, not an
+   individual simulation method's scoped tag):
 
    .. code-block:: console
 
-      $ git -C simulation-backend checkout vX.Y.Z
-      $ git add simulation-backend
+      $ git -C <submodule> checkout vX.Y.Z
+      $ git add <submodule>
 
 2. Commit and tag the umbrella repo:
 
    .. code-block:: console
 
-      $ git commit -m "Bump CHORAS version: update simulation-backend to vX.Y.Z"
+      $ git commit -m "Bump CHORAS version: update <submodule>(s) to vX.Y.Z"
       $ git tag vA.B.C
 
 3. Push:
