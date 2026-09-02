@@ -30,3 +30,10 @@ The following steps will help you navigate the process.
    contributing/simulation_method/setup_dev.rst
    contributing/simulation_method/contribute_method.rst
    contributing/simulation_method/configuring.rst
+
+.. toctree::
+   :caption: Contributing to the frontend
+   :maxdepth: 1
+
+   contributing/frontend/setup_dev.rst
+   contributing/frontend/releasing.rst
