@@ -38,13 +38,14 @@ jobs:
           submodules: recursive
           fetch-depth: 0
 
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
       - name: Read component versions
         id: versions
         run: |
-          # Read from the version source-of-truth files (pyproject.toml / package.json).
-          # git describe is not used: checkout@v4 only fetches the pinned commit for
-          # each submodule, not the remote tags, so --exact-match would always fail.
-          python3 - <<'PYEOF'
           import tomllib, json, os
           with open('backend/pyproject.toml', 'rb') as f:
               backend_ver = tomllib.load(f)['project']['version']
