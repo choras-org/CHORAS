@@ -46,6 +46,7 @@ jobs:
       - name: Read component versions
         id: versions
         run: |
+          python3 - <<'PYEOF'
           import tomllib, json, os
           with open('backend/pyproject.toml', 'rb') as f:
               backend_ver = tomllib.load(f)['project']['version']
