@@ -1,0 +1,67 @@
+# PR Bundle
+#
+# Runs on every pull request to produce a downloadable zip for local testing.
+# The archive is identical to the release bundle — same exclusions, same layout —
+# but named after the PR number and uploaded as a workflow artifact instead of
+# creating a GitHub Release.
+#
+# Download from the Actions run page → Artifacts section.
+
+name: PR Bundle
+
+on:
+  pull_request:
+
+jobs:
+  bundle-pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout with submodules
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Stage and bundle
+        run: |
+          ARCHIVE_NAME="CHORAS-pr${{ github.event.number }}"
+          STAGING="/tmp/${ARCHIVE_NAME}"
+          rsync -a \
+            --exclude=".git" \
+            --exclude=".github" \
+            --exclude=".venv" \
+            --exclude="node_modules" \
+            --exclude="__pycache__" \
+            --exclude=".pytest_cache" \
+            --exclude="uploads" \
+            --exclude="*.egg-info" \
+            . "$STAGING/"
+          cd /tmp
+          zip -r "${GITHUB_WORKSPACE}/${ARCHIVE_NAME}.zip" "${ARCHIVE_NAME}"
+          echo "ARCHIVE=${ARCHIVE_NAME}.zip" >> "$GITHUB_ENV"
+
+      - name: Upload bundle artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: CHORAS-pr${{ github.event.number }}
+          path: ${{ env.ARCHIVE }}
+          retention-days: 7
+
+  test-build:
+    runs-on: ubuntu-latest
+    needs: bundle-pr
+
+    steps:
+      - name: Download bundle artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: CHORAS-pr${{ github.event.number }}
+
+      - name: Unpack bundle
+        run: unzip CHORAS-pr${{ github.event.number }}.zip
+
+      - name: Build with docker compose
+        # Runs only the build step — `docker compose up` starts long-running services
+        # and is not suitable for CI. A successful build proves the bundle is complete.
+        working-directory: CHORAS-pr${{ github.event.number }}
+        run: docker compose --profile sim_method build
