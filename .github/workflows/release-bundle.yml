@@ -12,7 +12,9 @@
 #   3. Bundles the full source tree — minus dev artifacts (.git, .venv,
 #      node_modules, etc.) — into CHORAS-vX.Y.Z.zip, with a top-level
 #      directory so it unpacks cleanly.
-#   4. Creates a GitHub Release as a draft (publish manually after review).
+#   4. Unpacks the bundle on a fresh runner and runs `docker compose --profile sim_method build`
+#      to verify it is complete and buildable before publishing.
+#   5. Creates a GitHub Release as a draft (publish manually after review).
 #      Tags containing a hyphen (e.g. v1.0.0-rc.1) are flagged as pre-releases.
 #
 # The zip contains everything needed to build locally:
@@ -28,8 +30,6 @@ on:
 jobs:
   bundle-release:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
 
     steps:
       - name: Checkout with submodules
@@ -108,13 +108,62 @@ jobs:
             . "$STAGING/"
           cd /tmp
           zip -r "${GITHUB_WORKSPACE}/${ARCHIVE_NAME}.zip" "${ARCHIVE_NAME}"
-          echo "ARCHIVE=${ARCHIVE_NAME}.zip" >> "$GITHUB_ENV"
+
+      - name: Upload bundle artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: CHORAS-${{ github.ref_name }}
+          path: CHORAS-${{ github.ref_name }}.zip
+          retention-days: 7
+
+      - name: Upload release notes artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-notes-${{ github.ref_name }}
+          path: release_notes.md
+          retention-days: 7
+
+  test-build:
+    runs-on: ubuntu-latest
+    needs: bundle-release
+
+    steps:
+      - name: Download bundle artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: CHORAS-${{ github.ref_name }}
+
+      - name: Unpack bundle
+        run: unzip CHORAS-${{ github.ref_name }}.zip
+
+      - name: Build with docker compose
+        # Runs only the build step — `docker compose up` starts long-running services
+        # and is not suitable for CI. A successful build proves the bundle is complete.
+        working-directory: CHORAS-${{ github.ref_name }}
+        run: docker compose --profile sim_method build
+
+  create-release:
+    runs-on: ubuntu-latest
+    needs: test-build
+    permissions:
+      contents: write
+
+    steps:
+      - name: Download bundle artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: CHORAS-${{ github.ref_name }}
+
+      - name: Download release notes artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: release-notes-${{ github.ref_name }}
 
       - name: Create draft release
         uses: softprops/action-gh-release@v2
         with:
           name: "CHORAS ${{ github.ref_name }}"
           body_path: release_notes.md
-          files: ${{ env.ARCHIVE }}
+          files: CHORAS-${{ github.ref_name }}.zip
           draft: true
           prerelease: ${{ contains(github.ref_name, '-') }}
