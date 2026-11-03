@@ -5,6 +5,11 @@ History
 Unreleased
 ----------
 
+Changed
+^^^^^^^
+
+- Updated the accent color in the docs to match the orange used in dark mode.
+
 0.2.0 (2026-09-03)
 ------------------
 
