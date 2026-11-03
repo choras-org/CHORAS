@@ -5,6 +5,8 @@ History
 Unreleased
 ----------
 
+- Add documentation on explicitly specifying the psycopg2 dialect when connecting to a PostgreSQL database in the backend.
+
 0.2.0 (2026-09-03)
 ------------------
 
