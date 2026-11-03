@@ -5,6 +5,11 @@ History
 Unreleased
 ----------
 
+Added
+^^^^^
+
+- Add documentation on explicitly specifying the psycopg2 dialect when connecting to a PostgreSQL database in the backend.
+
 Changed
 ^^^^^^^
 

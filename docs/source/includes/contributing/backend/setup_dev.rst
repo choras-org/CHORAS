@@ -78,8 +78,8 @@ From the ``backend`` directory:
       FLASK_RUN_PORT=5000
 
       # Database (optional — omit to use the default SQLite3 database)
-      DATABASE_URL=postgresql://db_user:db_password@localhost/db_dev
-      DATABASE_TEST_URL=postgresql://db_user:db_password@localhost/db_test
+      DATABASE_URL=postgresql+psycopg2://db_user:db_password@localhost/db_dev
+      DATABASE_TEST_URL=postgresql+psycopg2://db_user:db_password@localhost/db_test
 
 2. **Create database tables and seed initial data:**
 
