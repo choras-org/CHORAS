@@ -5,6 +5,22 @@ History
 Unreleased
 ----------
 
+0.2.1 (2026-11-04)
+------------------
+
+This version of CHORAS uses the following versions of
+
+- frontend: v0.1.0
+- backend: v0.2.1
+- simulation-backend: v0.1.0
+
+For a complete list of changes, please refer to the changelogs of backend, frontend, and simulation-backend.
+
+Fixed
+^^^^^
+
+- Explicitly set the psycop2 dialect. Fixes database access for the backend
+
 Added
 ^^^^^
 
