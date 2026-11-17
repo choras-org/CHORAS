@@ -1,0 +1,8 @@
+# Runs the frontend with the Vite dev server instead of the static build:
+# docker compose -f docker-compose.yml -f docker-compose.dev.yml up
+services:
+  frontend:
+    build:
+      target: dev
+    ports: !override
+      - "5173:5173"
