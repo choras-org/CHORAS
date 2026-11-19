@@ -21,9 +21,7 @@ services:
       context: ./frontend-v2 # path to your local frontend Dockerfile
       dockerfile: Dockerfile # optional if named Dockerfile
     ports:
-      - "5173:5173"
-    environment:
-      - REACT_APP_API_URL=http://backend:5001
+      - "5173:80" # static build served by Nginx; for the Vite dev server see docker-compose.dev.yml
     depends_on:
       - backend
 
@@ -93,6 +91,16 @@ services:
     image: misuka_image:latest
     profiles:
       - sim_method
+
+  # BUILD-ONLY: MoD-ART simulation (profile: sim_method)
+  modart-method:
+    platform: linux/amd64
+    build:
+      context: ./simulation-backend
+      dockerfile: modart_method/Dockerfile
+    image: modart_image:latest
+    profiles:
+      - sim_method # Skipped in docker compose up
 
 volumes:
   postgresql_data:

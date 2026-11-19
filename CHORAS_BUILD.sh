@@ -20,4 +20,7 @@ echo "Docker image exported to sparrowpy_image.tar"
 docker save -o backend/app/services/executors/misuka_image.tar misuka_image:latest
 echo "Docker image exported: misuka_image.tar"
 
+docker save -o backend/app/services/executors/modart_image.tar modart_image:latest
+echo "Docker image exported to modart_image.tar"
+
 docker compose up

@@ -78,14 +78,18 @@ From the ``backend`` directory:
       FLASK_RUN_PORT=5000
 
       # Database (optional — omit to use the default SQLite3 database)
-      DATABASE_URL=postgresql://db_user:db_password@localhost/db_dev
-      DATABASE_TEST_URL=postgresql://db_user:db_password@localhost/db_test
+      DATABASE_URL=postgresql+psycopg2://db_user:db_password@localhost/db_dev
+      DATABASE_TEST_URL=postgresql+psycopg2://db_user:db_password@localhost/db_test
 
-2. **Create database tables and seed initial data:**
+2. **Create or update the database schema and seed initial data:**
 
    .. code-block:: bash
 
+      flask stamp-legacy-db
+      flask db upgrade
       flask create-db
+
+   Run these again after pulling changes that add new migrations. See :ref:`database-migrations` below.
 
 3. **Run the development server:**
 
@@ -102,7 +106,7 @@ From the ``backend`` directory:
 Flask CLI Reference
 -------------------
 
-- Create all tables and seed initial data:
+- Seed initial data (materials, settings, example projects; also creates missing tables):
 
   .. code-block:: sh
 
@@ -120,25 +124,37 @@ Flask CLI Reference
 
      flask reset-db
 
+.. _database-migrations:
+
 Database Migrations
 -------------------
 
-The backend uses `Flask-Migrate <https://flask-migrate.readthedocs.io>`_ for schema migrations.
+The backend uses `Flask-Migrate <https://flask-migrate.readthedocs.io>`_ (Alembic) for schema migrations.
+The migration files live in ``backend/migrations/versions/``. They start from the database schema of the
+v0.2.0 release and are applied automatically when the backend container starts.
 
-- Initialise the migration repository:
+- Apply all pending migrations:
 
   .. code-block:: sh
 
-     flask db init
+     flask stamp-legacy-db
+     flask db upgrade
 
-- Generate a migration version:
+  ``flask stamp-legacy-db`` only does something for databases created before migrations existed
+  (CHORAS v0.2.0 and v0.2.1): it marks them as being at the v0.2.0 starting point, so that
+  ``flask db upgrade`` can update them.
+
+- After changing a model, generate a migration and review the generated file before committing it
+  together with the model change:
 
   .. code-block:: sh
 
      flask db migrate -m "Description"
 
-- Apply the migration:
+- Check that the models and migrations match (CI runs this as well):
 
   .. code-block:: sh
 
-     flask db upgrade
+     flask db check
+
+The migration repository already exists, so ``flask db init`` must not be run again.
