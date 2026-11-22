@@ -27,3 +27,11 @@ To additionally clear up all volumes, which will result in the loss of all data 
 .. code-block:: bash
 
    docker system prune -a --volumes
+
+Frontend does not load on macOS (Apple Silicon)
+-----------------------------------------------
+
+If the CHORAS web page at ``http://localhost:5173`` stays blank or fails to load on a Mac with Apple Silicon, and the frontend logs show ``fatal error: lfstack.push`` or ``The service is no longer running``, Docker Desktop is emulating the ``amd64`` images without Rosetta.
+
+To fix this, enable **Use Rosetta for x86_64/amd64 emulation on Apple Silicon** in Docker Desktop under **Settings -> General**, click **Apply & restart**, and start CHORAS again (see :ref:`starting-choras`).
+No rebuild is needed.
