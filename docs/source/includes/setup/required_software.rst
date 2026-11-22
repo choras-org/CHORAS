@@ -33,3 +33,18 @@ Docker Setup
    .. code-block:: bash
 
       wsl --update
+
+5. **macOS with Apple Silicon (M1/M2/M3/...) only:** CHORAS uses ``amd64``
+   Docker images, which Docker Desktop has to emulate on Apple Silicon.
+   Enable Rosetta for this emulation, as the default emulation can make the
+   frontend crash:
+
+   1. Open **Docker Desktop** and go to **Settings -> General**.
+   2. Enable **Use Virtualization framework**.
+   3. Enable **Use Rosetta for x86_64/amd64 emulation on Apple Silicon**.
+   4. Click **Apply & restart**.
+
+   .. note::
+      To check whether your Mac uses Apple Silicon, click the Apple menu and
+      choose **About This Mac**. It will list a chip such as *"Apple M1"*
+      for Apple Silicon, or a processor such as *"Intel Core i7"* for Intel.
