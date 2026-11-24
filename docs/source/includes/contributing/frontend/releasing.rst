@@ -17,6 +17,11 @@ bump automatically:
 - ``feat: ...`` -> minor release
 - ``feat: ...`` with a ``BREAKING CHANGE:`` footer -> major release
 
+Below ``1.0.0``, standard-version lowers each bump by one level: ``feat``
+gives a patch release and a breaking change a minor release. Use
+``npm run release:minor`` for a release with new features until the
+frontend reaches ``1.0.0``.
+
 This strategy is based on semantic versioning, see the `versioning section <../general/releasing.html#versioning>`_ in the general contributing guidelines.
 
 Cutting a release
